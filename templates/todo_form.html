@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3 class="mb-4">{% if todo %}Update Todo{% else %}Add New Todo{% endif %}</h3>
+
+<form method="post" class="card p-4 shadow">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label class="form-label">Title <span class="text-danger">*</span></label>
+        <input type="text" name="title" class="form-control" value="{{ todo.title }}" required maxlength="100">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Description (optional)</label>
+        <textarea name="description" class="form-control" rows="3">{{ todo.description }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Save Todo</button>
+    <a href="{% url 'todo_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+
+{% endblock %}
