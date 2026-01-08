@@ -24,6 +24,11 @@ A beautiful, responsive ToDo application built with Django featuring full Create
 
 ## How to Run Locally (Without Docker)
 
+
+
+# CI/CD working! 🚀
+
+
 ```bash
 git clone https://github.com/Aravind-Babu31/django-todo-crud-app.git
 cd django-todo-crud-app
@@ -35,4 +40,4 @@ python manage.py runserver
 
 
 
-# CI/CD working! 🚀
+
